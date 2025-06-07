@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AROGVITA Shop</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/1043/1043429.png">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">AROGVITA Shop</div>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#cart" id="nav-cart-link">Cart</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#account">Account</a></li>
+                </ul>
+            </nav>
+            <button class="cart-icon" id="cart-btn" aria-label="Shopping Cart">
+                🛒<span id="cart-count">0</span>
+            </button>
+        </div>
+    </header>
+    <main>
+        <!-- Home Section -->
+        <section id="home">
+            <h1>Welcome to AROGVITA Shop</h1>
+            <img src="https://cdn-icons-png.flaticon.com/512/1043/1043429.png" alt="Fitness Logo" class="home-logo">
+            
+            <!-- Slideshow Section -->
+            <div class="home-slideshow-wrapper">
+                <div class="home-slideshow" id="home-slideshow">
+                    <div class="slide active">
+                        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80" alt="Outdoor Jog" />
+                        <div class="slide-desc">
+                            <h3>Outdoor Cardio</h3>
+                            <p>Jogging outdoors boosts mental health and strengthens your heart.</p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="https://glogym.co.uk/wp-content/uploads/2016/01/banner_thumbs_09.jpg" alt="Spin Class" />
+                        <div class="slide-desc">
+                            <h3>Group Spin Class</h3>
+                            <p>Burn calories together and stay motivated with energetic spin classes.</p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="https://static.wixstatic.com/media/654fda_ac475e2e60344cd4bf3e551381a8e49d~mv2.jpg/v1/fill/w_640,h_516,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/654fda_ac475e2e60344cd4bf3e551381a8e49d~mv2.jpg" alt="Healthy Food" />
+                        <div class="slide-desc">
+                            <h3>Nutrition Matters</h3>
+                            <p>Balance your workouts with nutritious meals and fresh fruit bowls for optimal recovery.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide-controls">
+                    <button id="slide-prev" aria-label="Previous slide">&#8592;</button>
+                    <button id="slide-next" aria-label="Next slide">&#8594;</button>
+                </div>
+            </div>
+            
+            <!-- Health & Outlet Info -->
+            <div class="home-health-desc">
+                <h2>Sports & Health for Everyone</h2>
+                <p>
+                    At Physical Fitness Shop, we believe in a holistic approach to health:
+                </p>
+                <ul>
+                    <li>World-class gym equipment for all fitness levels</li>
+                    <li>Premium protein and nutrition products</li>
+                    <li>Friendly, knowledgeable staff to guide your journey</li>
+                    <li>Fresh snacks and beverages for optimal recovery</li>
+                </ul>
+            </div>
+            <div class="outlet-location">
+                <h3><span class="location-icon">📍</span>Visit Our Outlet</h3>
+                <p>
+                    Jl. Sehat No. 88, Jakarta, Indonesia<br>
+                    <span class="outlet-map-link">
+                        <a href="https://goo.gl/maps/7R7x9VjZNq8fZ1vD9" target="_blank" rel="noopener">
+                            See on Google Maps
+                        </a>
+                    </span>
+                </p>
+                <ul class="outlet-contact-list">
+                   <li><strong>Phone:</strong> <a href="tel:+622112345678">+62 21 1234 5678</a></li>
+                   <li><strong>Email:</strong> <a href="mailto:info@arogtivashop.com">info@arogtivashop.com</a></li>
+                </ul>
+            </div>
+            <!-- Decorative SVGs -->
+            <svg class="decor-dumbbell" width="80" height="80" viewBox="0 0 80 80" fill="none">
+                <rect x="32" y="30" width="16" height="20" rx="4" fill="#3056d3" />
+                <rect x="18" y="33" width="8" height="14" rx="2" fill="#30b37c"/>
+                <rect x="54" y="33" width="8" height="14" rx="2" fill="#30b37c"/>
+            </svg>
+            <svg class="decor-fruit" width="70" height="60" viewBox="0 0 70 60" fill="none">
+                <ellipse cx="50" cy="45" rx="18" ry="12" fill="#f76c35" />
+                <ellipse cx="22" cy="37" rx="13" ry="9" fill="#ffd600"/>
+                <ellipse cx="32" cy="20" rx="10" ry="7" fill="#2bb673"/>
+            </svg>
+        </section>
+
+        <!-- Search & Filters -->
+        <section class="search-filter-section" aria-label="Product Search and Filter">
+            <input type="search" id="search-input" placeholder="Search products..." aria-label="Search products">
+            <select id="filter-category" aria-label="Filter by category">
+                <option value="">All Categories</option>
+                <option value="Cardio">Cardio</option>
+                <option value="Strength">Strength</option>
+                <option value="Accessories">Accessories</option>
+                <option value="Protein">Protein</option>
+            </select>
+            <select id="filter-rating" aria-label="Filter by rating">
+                <option value="">All Ratings</option>
+                <option value="4">4 stars & up</option>
+                <option value="3">3 stars & up</option>
+                <option value="2">2 stars & up</option>
+                <option value="1">1 star & up</option>
+            </select>
+        </section>
+
+        <!-- Products Section -->
+        <section id="products" class="products-section" aria-label="Product Listings"></section>
+
+        <!-- Account Section -->
+        <section id="account" class="account-section" style="display:none;">
+            <h2>Account Management</h2>
+            <div class="account-switch">
+                <button type="button" id="login-tab" class="active">Login</button>
+                <button type="button" id="register-tab">Register</button>
+            </div>
+            <form id="login-form" style="display: flex;">
+                <label>
+                    Email:
+                    <input type="email" required placeholder="Enter your email" autocomplete="username">
+                </label>
+                <label>
+                    Password:
+                    <input type="password" required placeholder="Enter your password" autocomplete="current-password">
+                </label>
+                <button type="submit">Login</button>
+                <span class="account-msg" id="login-msg"></span>
+            </form>
+            <form id="register-form" style="display:none;">
+                <label>
+                    Email:
+                    <input type="email" required placeholder="Enter your email" autocomplete="username">
+                </label>
+                <label>
+                    Password:
+                    <input type="password" required placeholder="Enter your password" autocomplete="new-password">
+                </label>
+                <label>
+                    Confirm Password:
+                    <input type="password" required placeholder="Confirm password" autocomplete="new-password">
+                </label>
+                <button type="submit">Register</button>
+                <span class="account-msg" id="register-msg"></span>
+            </form>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section" style="display:none;">
+            <h2>Contact Us</h2>
+            <form id="contact-form">
+                <label>
+                    Name:
+                    <input type="text" required placeholder="Your name">
+                </label>
+                <label>
+                    Email:
+                    <input type="email" required placeholder="Your email">
+                </label>
+                <label>
+                    Message:
+                    <textarea required placeholder="How can we help you?"></textarea>
+                </label>
+                <button type="submit">Send</button>
+                <span id="contact-msg"></span>
+            </form>
+        </section>
+    </main>
+
+    <!-- Cart Modal -->
+    <div id="cart-modal">
+        <div class="cart-content">
+            <button class="close-cart" id="close-cart" aria-label="Close cart">✖</button>
+            <h2>Your Cart</h2>
+            <ul class="cart-item-list" id="cart-item-list"></ul>
+            <div class="cart-total" id="cart-total"></div>
+            <button id="checkout-btn" style="display:none;">Checkout</button>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-links">
+            <a href="#home">Home</a> |
+            <a href="#products">Products</a> |
+            <a href="#cart">Cart</a> |
+            <a href="#contact">Contact</a> |
+            <a href="#account">Account</a>
+        </div>
+        <div class="footer-social">
+        <a href="https://instagram.com/arogtivashop" target="_blank" aria-label="Instagram" class="social-icon">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/instagram.svg" alt="Instagram" />
+        </a>
+        <a href="https://tiktok.com/@arogtivashop" target="_blank" aria-label="TikTok" class="social-icon">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/tiktok.svg" alt="TikTok" />
+        </a>
+        <a href="https://facebook.com/arogtivashop" target="_blank" aria-label="Facebook" class="social-icon">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/facebook.svg" alt="Facebook" />
+        </a>
+        <a href="https://twitter.com/arogtivashop" target="_blank" aria-label="Twitter" class="social-icon">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/twitter.svg" alt="Twitter" />
+        </a>
+       </div>
+        <div>© 2025 AROGTIVA Shop. All rights reserved.</div>
+    </footer>
+    <script src="app.js"></script>
+</body>
+</html>
